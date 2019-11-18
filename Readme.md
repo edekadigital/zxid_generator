@@ -1,6 +1,6 @@
 # zxid_generator 
 
-a simple helper to generate zxids, as a aworkaround for [ZOOKEEPER-832](https://issues.apache.org/jira/browse/ZOOKEEPER-832)
+a simple helper to generate zxids, as a a workaround for [ZOOKEEPER-832](https://issues.apache.org/jira/browse/ZOOKEEPER-832)
 
 ## why?
 we deploy our entire Solr 8.x.x with/Zookeeper 3.5.x ensemble without persistence of the previous deployment.

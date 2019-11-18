@@ -1,8 +1,12 @@
 from kazoo.client import KazooClient
 import os
 
+zk_timeout = 60.0
+if "ZK_TIMEOUT" in os.environ:
+  zk_timeout = float(os.environ['ZK_TIMEOUT'])
+
 print(os.environ['ZK_HOST'])
-zk = KazooClient(hosts=os.environ['ZK_HOST']+':2181')
+zk = KazooClient(hosts=os.environ['ZK_HOST']+':2181',timeout=zk_timeout)
 zk.start()
 
 node = "/ZOOKEEPER-832"
